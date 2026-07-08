@@ -40,7 +40,7 @@ public class Hero {
     // }
 
     public static void battle(Hero h1, Hero h2) {
-        System.out.println("============================================");
+        System.out.println("=========================================");
         int count = 1;
         while (h1.hp > 0 && h2.hp > 0) {
 
@@ -51,7 +51,7 @@ public class Hero {
             System.out.println(h2.getName() + h2.getHp());
 
             h2.attack(h1);
-            System.out.println(h1.getName() + h1.getHp() + "\n--------------------------------------------");
+            System.out.println(h1.getName() + h1.getHp() + "\n-----------------------------------------");
         }
         if (h1.hp <= 0) {
             System.out.println(h1.getName() + " da chet");
