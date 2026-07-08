@@ -32,7 +32,7 @@ public class Hero {
     }
 
     public static void battle(Hero h1, Hero h2) {
-        System.out.println("=========================================");
+        System.out.println("=========================================\n");
 
         int count = 1;
         while (h1.hp > 0 && h2.hp > 0) {
@@ -49,7 +49,7 @@ public class Hero {
             System.out.println(h1.getName() + h1.getHp());
             if (h1.hp <= 0)
                 break;
-            System.out.println("\n-----------------------------------------");
+            System.out.println("\n-----------------------------------------\n");
         }
 
         if (h1.hp <= 0) {
