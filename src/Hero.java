@@ -27,37 +27,36 @@ public class Hero {
     }
 
     public void attack(Hero hero) {
-        if (hero.hp <= 0) {
-            System.out.println(hero.name + " da chet");
-        } else {
-            hero.hp -= this.damage;
-            System.out.println(this.name + " tan cong " + hero.name + " voi sat thuong: " + this.damage);
-        }
+        hero.hp -= this.damage;
+        System.out.println(this.name + " tan cong " + hero.name + " voi sat thuong: " + this.damage);
     }
-
-    // public void attack() {
-    // System.out.println("Không có nhân vật để tấn công");
-    // }
 
     public static void battle(Hero h1, Hero h2) {
         System.out.println("=========================================");
+
         int count = 1;
         while (h1.hp > 0 && h2.hp > 0) {
-
-            System.out.println("Hiep dau: " + count);
+            System.out.println("Hiep dau: " + count + "\n-----" + h1.getName() + ": " + h1.hp + "HP" + " VS "
+                    + h2.getName() + ": " + h2.hp + "HP" + "-----");
             count++;
 
             h1.attack(h2);
             System.out.println(h2.getName() + h2.getHp());
+            if (h2.hp <= 0)
+                break;
 
             h2.attack(h1);
-            System.out.println(h1.getName() + h1.getHp() + "\n-----------------------------------------");
+            System.out.println(h1.getName() + h1.getHp());
+            if (h1.hp <= 0)
+                break;
+            System.out.println("\n-----------------------------------------");
         }
+
         if (h1.hp <= 0) {
-            System.out.println(h1.getName() + " da chet");
+            System.out.println(h1.name + " da chet");
             System.out.println(h2.getName() + " WIN");
         } else if (h2.hp <= 0) {
-            System.out.println(h2.getName() + " da chet");
+            System.out.println(h2.name + " da chet");
             System.out.println(h1.getName() + " WIN");
         }
     }

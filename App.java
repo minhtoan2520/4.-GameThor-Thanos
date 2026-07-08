@@ -3,7 +3,7 @@ import src.Hero;
 public class App {
     public static void main(String[] args) {
         Hero thor = new Hero("Thor", 200);
-        Hero thanos = new Hero("Thanos", 250);
+        Hero thanos = new Hero("Thanos", 150);
 
         System.out.println(thor.showInfo());
         System.out.println(thanos.showInfo());
